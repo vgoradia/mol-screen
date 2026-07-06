@@ -1,6 +1,6 @@
 # MolScreen
 
-**AI-powered early-stage molecular toxicity screening with substructure-level explainability and LLM-generated research triage notes.**
+**AI early-stage molecular toxicity screening with substructure-level explainability and LLM-generated research triage notes.**
 
 MolScreen is a graph neural network (GNN) trained on 7,823 compounds from the NIH/EPA Tox21 dataset, predicting toxicity risk across 12 biological endpoints directly from molecular structure. It achieves a mean test ROC-AUC of 0.8525, outperforming the published SSL-GCN baseline (Chen et al., 2021) by 9.5 percentage points. Beyond classification, MolScreen highlights which specific atoms drove each prediction and generates a plain-English research triage note to help screening chemists prioritize compounds for further testing.
 
@@ -78,20 +78,8 @@ mol-screen/
 Paste any valid SMILES string into the app and click **Analyze Compound**. MolScreen returns:
 
 1. Predicted toxicity probability across all 12 Tox21 endpoints
-2. A molecular structure visualization with atoms colored by importance (red = high model attention)
+2. A molecular structure visualization with atoms colored by importance
 3. A plain-English research triage note recommending whether to advance, modify, or deprioritize the compound
-
----
-
-## Citation
-
-If you use MolScreen in your research, please cite:
-
-```
-Goradia, V. MolScreen: A Graph Neural Network for Early-Stage Molecular Toxicity
-Screening with Substructure-Level Explainability and LLM-Generated Research Triage Notes.
-2026.
-```
 
 ---
 
@@ -103,5 +91,5 @@ MolScreen is a computational screening aid, not a diagnostic or regulatory tool.
 
 ## Author
 
-Veer Goradia — Howard High School, Ellicott City, MD  
+Veer Goradia 
 GitHub: [vgoradia](https://github.com/vgoradia) | Hugging Face: [vgoradia](https://huggingface.co/vgoradia)
