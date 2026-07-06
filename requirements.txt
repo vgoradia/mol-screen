@@ -1,0 +1,5 @@
+streamlit
+anthropic
+torch
+torch_geometric
+rdkit
