@@ -2,7 +2,7 @@
 
 **AI early-stage molecular toxicity screening with substructure-level explainability and LLM-generated research triage notes.**
 
-MolScreen is a graph neural network (GNN) trained on 7,823 compounds from the NIH/EPA Tox21 dataset, predicting toxicity risk across 12 biological endpoints directly from molecular structure. It achieves a mean test ROC-AUC of 0.8525, outperforming the published SSL-GCN baseline (Chen et al., 2021) by 9.5 percentage points. Beyond classification, MolScreen highlights which specific atoms drove each prediction and generates a plain-English research triage note to help screening chemists prioritize compounds for further testing.
+MolScreen is a graph neural network (GNN) trained on 7,823 compounds from the NIH/EPA Tox21 dataset, predicting toxicity risk across 12 biological endpoints directly from molecular structure. Across 10 independent training runs, MolScreen achieves a mean test ROC-AUC of 0.8442 under random splitting and 0.7716 under Bemis-Murcko scaffold splitting, outperforming the best published baseline on this dataset (Chen et al., 2021 SSL-GCN: 0.757) under the same scaffold split protocol. Beyond classification, MolScreen highlights which specific atoms drove each prediction and generates a plain-English research triage note to help screening chemists prioritize compounds for further testing.
 
 **Live App:** https://mol-screen-32jrti5gpuajmd8wse5u3f.streamlit.app/
 
@@ -23,7 +23,7 @@ MolScreen is a graph neural network (GNN) trained on 7,823 compounds from the NI
 |---|---|
 | Architecture | 4-layer GINEConv GNN with residual connections |
 | Training data | 6,258 molecules (80% of Tox21) |
-| Test mean ROC-AUC | 0.8525 |
+| Test mean ROC-AUC | 0.8442 |
 | Parameters | ~374,000 |
 | Inference time | ~0.4 seconds end-to-end |
 | Comparison baseline | Chen et al. (2021) SSL-GCN: 0.757 mean ROC-AUC |
